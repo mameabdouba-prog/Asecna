@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Connexion à l'espace ASECNA CEV." />
+  <title>ASECNA · CEV — Connexion</title>
+  <link rel="stylesheet" href="/ACCEUIL/css/styles.css" />
+</head>
+<body class="page-login">
+  <main class="login-shell">
+    <aside class="login-visual">
+      <div class="visual-content">
+        <div class="brand brand-light">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-copy">
+            <strong>ASECNA · CEV</strong>
+            <span>Assistant documentaire aéronautique</span>
+          </span>
+        </div>
+        <div class="visual-message">
+          <p class="eyebrow">Espace technicien</p>
+          <h2>La documentation suit le technicien.</h2>
+          <p>Procédures, effectivités et bons de travail dans un seul espace de consultation.</p>
+        </div>
+        <a class="visual-back" href="/ACCEUIL/">Retour à l'accueil</a>
+      </div>
+    </aside>
+
+    <section class="login-panel" aria-labelledby="login-title">
+      <div class="login-card">
+        <p class="eyebrow">Accès CEV</p>
+        <h1 id="login-title">Connexion</h1>
+        <p class="login-intro">Accédez à l'assistant documentaire de maintenance.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Adresse e-mail professionnelle</label>
+            <input id="email" name="email" type="email" autocomplete="username" required aria-describedby="email-error" />
+            <p class="field-error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="password">Mot de passe</label>
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" required aria-describedby="password-error" />
+              <button type="button" id="toggle-password" class="password-toggle" aria-label="Afficher le mot de passe">Afficher</button>
+            </div>
+            <p class="field-error" id="password-error" role="alert"></p>
+          </div>
+
+          <label class="checkbox-row" for="remember">
+            <input id="remember" name="remember" type="checkbox" />
+            <span>Rester connecté sur cet appareil</span>
+          </label>
+
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" id="login-submit" class="btn btn-primary btn-block">Se connecter</button>
+        </form>
+
+        <p class="login-note">Prototype de démonstration : l'authentification n'est pas encore reliée à un serveur.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/ACCEUIL/js/app.js" defer></script>
+</body>
+</html>
